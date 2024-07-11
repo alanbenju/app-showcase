@@ -1,32 +1,29 @@
 ---
 import '../styles/main.css'
 
-const heading = "Party Banner";
-const subheading = "Airplay custom animated banners to your TV and elevate any celebration.";
-const appIcon = "/images/app-icon.svg";
-const appScreenshot = "/images/app-screenshot.png";
+const heading = "TripPlanIt";
+const subheading = "Your personal travel assistant";
+const subheading2 = "Organize all your travel documents and data in one place.";
+const appIcon = "/images/trip-plan-it-logo-black.png";
+const appScreenshot = "/images/trip-plan-it-trip-manager.png";
 const footerImage = "/images/banners.svg";
 const badges = [
 	{
 		link: "https://apps.apple.com/us/app/party-banner/id1610931185",
-		image: "/images/app-store-badge.svg"
+		image: "/images/app-store-badge.svg",
+		ariaLabel: "apple store",
+		alt: "Appstore badge for tripPlanIt. Travel manager"
 	},
 	{
 		link: "https://apps.apple.com/us/app/party-banner/id1610931185",
-		image: "/images/google-play-badge.png"
+		image: "/images/google-play-badge.png",
+		ariaLabel: "google play store",
+		alt: "Google playstore badge for tripPlanIt. Travel manager"
+
 	},
 ];
-const authors = [
-	{
-		name: "Will Walker",
-		url: "https://willswire.com"
-	},
-	{
-		name: "Caden Kulp",
-		url: "https://cadens.studio"
-	},
-];
-const pageTitle = "App Showcase"
+
+const pageTitle = "TripPlanIt"
 const favicon = "/images/favicon.svg"
 ---
 
@@ -42,33 +39,25 @@ const favicon = "/images/favicon.svg"
 		<div class="container">
 			<main>
 				<div class="text-container">
-					<img src={appIcon} class="app-icon">
+					<img src={appIcon} class="app-icon" alt="TripPlanIt logo. Suitcase. Plan your trip">
 					<h1 class="heading">{heading}</h1>
 					<h2 class="subheading">{subheading}</h2>
-					<div class="badge-container">
+					<h2 class="subheading2">{subheading2}</h2>
+					<div class="badge-container" aria-disabled="true">
 						{badges.map(badge => (
 							<div>
-								<a href={badge.link} target="_blank">
-									<img src={badge.image} class="badge" />
+								<a aria-label={badge.ariaLabel}>
+									<img src={badge.image} class="badge", alt={badge.alt} />
 								</a>
 							</div>
 						))}
 					</div>
-					<p class="authors">Made with &#x2665; by 
-						{authors.map((author, index) => (
-								<span>
-									{index > 0 ? (index === authors.length - 1 ? ' and ' : ', ') : ''}
-									<a href={author.url} target="_blank">{author.name}</a>
-								</span>
-						))}
-					</p>
 				</div>
 				<div>
-					<img src={appScreenshot} class="app-screenshot">
+					<img src={appScreenshot} class="app-screenshot" alt="Plan your trip. Organize your files">
 				</div>
 			</main>
 			<footer>
-				<img src={footerImage} class="footer-image">
 			</footer>
 		</div>
 	</body>

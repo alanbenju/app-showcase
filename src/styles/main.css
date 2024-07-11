@@ -1,9 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Playwrite+CU:wght@100..400&display=swap');
+
 @font-face {
   font-family: 'Titan One';
   font-style: regular;
   font-weight: 400;
   src: url('/fonts/Titan_One_regular.woff2') format('woff2');
 }
+
+@font-face {
+  font-family: 'Comfortaa';
+  font-style: regular;
+  font-weight: 400;
+  src: url('/fonts/Comfortaa-VariableFont_wght.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Maname';
+  font-style: regular;
+  font-weight: 400;
+  src: url('/fonts/Maname-Regular.ttf') format('ttf');
+}
+
+
+
+
+
+
+
 
 :root {
   --accent: #FF9305;
@@ -69,13 +94,20 @@ main {
   margin-bottom: 10px;
 }
 
+
 .heading {
-  font-family: 'Titan One', sans-serif;
-  color: var(--accent);
+  font-family: "Caveat", cursive;
+  color: #007BFF; /* Use the preferred hex color */
   margin-bottom: 16px;
 }
 
 .subheading {
+  font-size: 1.75rem;
+  font-weight: 300;
+  margin-bottom: 0px;
+}
+
+.subheading2 {
   font-size: 1.75rem;
   font-weight: 300;
   margin-bottom: 30px;
@@ -90,6 +122,9 @@ main {
 .badge {
   margin-bottom: 20px;
   height: 50px;
+  filter: grayscale(100%);
+  pointer-events: none; /* Makes the image not clickable */
+
 }
 .badge:hover {
   cursor: pointer;
@@ -109,7 +144,7 @@ main {
 }
 
 .app-screenshot {
-  width: 220px;
+  width: 500px;
 }
 
 footer {
