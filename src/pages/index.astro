@@ -29,6 +29,13 @@ const favicon = "/images/favicon.svg"
 
 <html lang="en">
 	<head>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+			  dataLayer.push(arguments);
+			}
+		  </script>
+
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVV9GZNHVC"></script>
 		<script is:inline>
@@ -38,20 +45,55 @@ const favicon = "/images/favicon.svg"
 
 		gtag('config', 'G-ZVV9GZNHVC');
 		</script>
+		<!-- Google Tag Manager -->
+		<script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-KLD9K58K');
+		</script>
+		<!-- End Google Tag Manager -->
+
+
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href={favicon} />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="TripPlanIt helps you organize all your travel documents and data in one place. Available on the App Store and Google Play." />
+		<meta property="og:title" content="TripPlanIt - Your Personal Travel Assistant" />
+		<meta property="og:description" content="TripPlanIt helps you organize all your travel documents and data in one place. Available on the App Store and Google Play." />
+		<meta property="og:image" content={appScreenshot} />
+		<meta property="og:url" content="https://yourwebsiteurl.com" />	
 		<title>{pageTitle}</title>
+		<script type="application/ld+json">
+			{
+			  "@context": "http://schema.org",
+			  "@type": "WebSite",
+			  "name": "TripPlanIt",
+			  "url": "https://yourwebsiteurl.com",
+			  "potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://yourwebsiteurl.com/search?q={search_term_string}",
+				"query-input": "required name=search_term_string"
+			  }
+			}
+			</script>
+	
+
 	</head>
 	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLD9K58K" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<!-- End Google Tag Manager (noscript) -->
 		<div class="container">
 			<main>
 				<div class="text-container">
-					<img src={appIcon} class="app-icon" alt="TripPlanIt logo. Suitcase. Plan your trip">
+					<img src={appIcon} class="app-icon" alt="TripPlanIt logo. Suitcase. Plan your trip" loading="lazy">
 					<h1 class="heading">{heading}</h1>
 					<h2 class="subheading">{subheading}</h2>
-					<h2 class="subheading2">{subheading2}</h2>
+					<p class="subheading2">{subheading2}</p>
 					<div class="badge-container" aria-disabled="true">
 						{badges.map(badge => (
 							<div>
@@ -63,7 +105,7 @@ const favicon = "/images/favicon.svg"
 					</div>
 				</div>
 				<div>
-					<img src={appScreenshot} class="app-screenshot" alt="Plan your trip. Organize your files">
+					<img src={appScreenshot} class="app-screenshot" alt="Plan your trip. Organize your files" loading="lazy">
 				</div>
 			</main>
 			<footer>
