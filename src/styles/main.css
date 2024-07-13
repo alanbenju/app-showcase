@@ -38,17 +38,33 @@ header .main-nav ul li a {
 }
 
 .hero {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 60px 20px;
-  background-color: #f4f4f4;
+  padding: 100px 20px;
+  background: url('/images/travelman.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  height: 500px;
+  color: white;
+}
+
+.hero:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
 }
 
 .hero-content {
+  position: relative;
+  z-index: 1;
   max-width: 600px;
-  margin-bottom: 20px;
 }
 
 .hero h1 {
@@ -60,12 +76,19 @@ header .main-nav ul li a {
 
 .hero p {
   font-size: 1.5rem;
-  color: #555;
+  color: #f4f4f4;
+}
+
+.hero-image {
+  position: relative;
+  z-index: 1;
+  max-width: 400px;
+  margin-top: 20px;
 }
 
 .hero-image img {
   width: 100%;
-  max-width: 800px;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
@@ -137,44 +160,25 @@ header .main-nav ul li a {
 .form-container button {
   padding: 15px 30px;
   border: none;
-  border-radius: 6px;
+  border-radius: 25px; /* More rounded corners */
   background-color: #007bff;
   color: white;
   font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-container button:hover {
   background-color: #0056b3;
+  transform: translateY(-3px); /* Slight lift effect */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: white;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-}
-
-footer p {
-  margin: 0;
-  font-size: 1rem;
-  color: #777;
-}
-
-@media (min-width: 768px) {
-  .hero {
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 100px 20px;
-  }
-
-  .hero-content {
-      text-align: left;
-      max-width: 50%;
-  }
-
-  .hero-image {
-      max-width: 50%;
-  }
+.form-container button:active {
+  background-color: #004494;
+  transform: translateY(0); /* Reset lift effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
