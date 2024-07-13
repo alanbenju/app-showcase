@@ -64,6 +64,7 @@ const favicon = "/images/favicon.svg"
 		<meta property="og:description" content="TripPlanIt helps you organize all your travel documents and data in one place. Available on the App Store and Google Play." />
 		<meta property="og:image" content={appScreenshot} />
 		<meta property="og:url" content="https://yourwebsiteurl.com" />	
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 		<title>{pageTitle}</title>
 		<script type="application/ld+json">
 			{
@@ -87,29 +88,38 @@ const favicon = "/images/favicon.svg"
 			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLD9K58K" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 		</noscript>
 		<!-- End Google Tag Manager (noscript) -->
-		<div class="container">
-			<main>
-				<div class="text-container">
-					<img src={appIcon} class="app-icon" alt="TripPlanIt logo. Suitcase. Plan your trip" loading="lazy">
-					<h1 class="heading">{heading}</h1>
-					<h2 class="subheading">{subheading}</h2>
-					<p class="subheading2">{subheading2}</p>
-					<div class="badge-container" aria-disabled="true">
-						{badges.map(badge => (
-							<div>
-								<a aria-label={badge.ariaLabel}>
-									<img src={badge.image} class="badge", alt={badge.alt} />
-								</a>
-							</div>
-						))}
-					</div>
-				</div>
-				<div>
-					<img src={appScreenshot} class="app-screenshot" alt="Plan your trip. Organize your files" loading="lazy">
-				</div>
-			</main>
-			<footer>
-			</footer>
-		</div>
-	</body>
+		<header class="main-header">
+			<div class="logo">
+				<img src="/images/trip-plan-it-logo-black.png" alt="TripPlanIt Logo">
+			</div>
+		</header>
+		<section class="hero">
+			<div class="hero-content">
+				<h1>TripPlanIt</h1>
+				<p>Your personal travel assistant.</p>
+			</div>
+			<div class="hero-image">
+				<img src="/images/trip-plan-it-trip-manager.png" alt="TripPlanIt Screenshot">
+			</div>
+		</section>
+		<section id="features" class="features">
+			<h2>Key Features</h2>
+			<ul>
+				<li> Organize all travel documents in one place</li>
+				<li> Easy access to hotel, flight, and activity information</li>
+				<li> Seamless collaboration with travel companions</li>
+				<li> Real-time updates and notifications</li>
+			</ul>
+		</section>
+			<section id="notify" class="form-container">
+			<h2>Get Notified When the App is Live</h2>
+			<form   action="https://formspree.io/f/mjkbkyjo" method="POST">
+				<input type="email" name="email" placeholder="Enter your email" required>
+				<button type="submit">Notify Me</button>
+			</form>
+		</section>
+		<footer class="main-footer">
+			<p>&copy; 2024 TripPlanIt. All rights reserved.</p>
+		</footer>
+		</body>
 </html>
