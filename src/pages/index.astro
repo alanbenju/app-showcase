@@ -1,5 +1,5 @@
 ---
-import '../styles/main.css'
+import "../styles/main.css";
 
 const heading = "Wanderfiles";
 const subheading = "Your personal travel assistant";
@@ -12,19 +12,18 @@ const badges = [
 		link: "https://apps.apple.com/us/app/party-banner/id1610931185",
 		image: "/images/app-store-badge.svg",
 		ariaLabel: "apple store",
-		alt: "Appstore badge for Wanderfiles. Travel manager"
+		alt: "Appstore badge for Wanderfiles. Travel manager",
 	},
 	{
 		link: "https://apps.apple.com/us/app/party-banner/id1610931185",
 		image: "/images/google-play-badge.png",
 		ariaLabel: "google play store",
-		alt: "Google playstore badge for Wanderfiles. Travel manager"
-
+		alt: "Google playstore badge for Wanderfiles. Travel manager",
 	},
 ];
 
-const pageTitle = "Wanderfiles"
-const favicon = "/images/favicon.svg"
+const pageTitle = "Wanderfiles";
+const favicon = "/images/favicon.svg";
 ---
 
 <html lang="en">
@@ -32,94 +31,159 @@ const favicon = "/images/favicon.svg"
 		<script is:inline>
 			window.dataLayer = window.dataLayer || [];
 			function gtag() {
-			  dataLayer.push(arguments);
+				dataLayer.push(arguments);
 			}
-		  </script>
+		</script>
 
 		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVV9GZNHVC"></script>
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-ZVV9GZNHVC"
+		></script>
 		<script is:inline>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
 
-		gtag('config', 'G-ZVV9GZNHVC');
+			gtag("config", "G-ZVV9GZNHVC");
 		</script>
 		<!-- Google Tag Manager -->
-		<script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-KLD9K58K');
+		<script is:inline>
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({
+					"gtm.start": new Date().getTime(),
+					event: "gtm.js",
+				});
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != "dataLayer" ? "&l=" + l : "";
+				j.async = true;
+				j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, "script", "dataLayer", "GTM-KLD9K58K");
 		</script>
 		<!-- End Google Tag Manager -->
-
 
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href={favicon} />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="Wanderfiles helps you organize all your travel documents and data in one place. Available on the App Store and Google Play." />
-		<meta property="og:title" content="Wanderfiles - Your Personal Travel Assistant" />
-		<meta property="og:description" content="Wanderfiles helps you organize all your travel documents and data in one place. Available on the App Store and Google Play." />
+		<meta
+			name="description"
+			content="Wanderfiles helps you organize all your travel documents and data in one place. Available on the App Store and Google Play."
+		/>
+		<meta
+			property="og:title"
+			content="Wanderfiles - Your Personal Travel Assistant"
+		/>
+		<meta
+			property="og:description"
+			content="Wanderfiles helps you organize all your travel documents and data in one place. Available on the App Store and Google Play."
+		/>
 		<meta property="og:image" content={appScreenshot} />
-		<meta property="og:url" content="https://wanderfiles.com" />	
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+		<meta property="og:url" content="https://wanderfiles.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 		<title>{pageTitle}</title>
 		<script type="application/ld+json">
 			{
-			  "@context": "http://schema.org",
-			  "@type": "WebSite",
-			  "name": "Wanderfiles",
-			  "url": "https://wanderfiles.com",
-			  "potentialAction": {
-				"@type": "SearchAction",
-				"target": "https://wanderfiles.com/search?q={search_term_string}",
-				"query-input": "required name=search_term_string"
-			  }
+				"@context": "http://schema.org",
+				"@type": "WebSite",
+				"name": "Wanderfiles",
+				"url": "https://wanderfiles.com",
+				"potentialAction": {
+					"@type": "SearchAction",
+					"target": "https://wanderfiles.com/search?q={search_term_string}",
+					"query-input": "required name=search_term_string"
+				}
 			}
-			</script>
-	
-
+		</script>
 	</head>
 	<body>
 		<!-- Google Tag Manager (noscript) -->
 		<noscript>
-			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLD9K58K" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+			<iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-KLD9K58K"
+				height="0"
+				width="0"
+				style="display:none;visibility:hidden"></iframe>
 		</noscript>
 		<!-- End Google Tag Manager (noscript) -->
-		<header class="main-header">
-			<div class="logo">
-				<img src="/images/wanderfiles-logo-black.png" alt="Wanderfiles Logo">
-			</div>
-		</header>
+		<header class="main-header"></header>
 		<section class="hero">
-			<div class="hero-overlay"></div>
-			<div class="hero-content">
-				<h1>Wanderfiles</h1>
-				<p>Your personal travel assistant</p>
+			<div class="hero-left container">
+				<img
+					src="/images/Wanderfiles-logo-color.png"
+					alt="Logo"
+					class="logo"
+				/>
+				<h1 class="hero-title">Manage Your Trip Files with Ease</h1>
+				<p class="hero-subtitle">
+					Wanderfiles helps you organize and access all your travel
+					documents in one place.
+					<br>
+					Say goodbye to travel stress!
+
+				</p>
+				<button
+					class="hero-button"
+					onclick="document.getElementById('notify').scrollIntoView();"
+					>Get Notified</button
+				>
 			</div>
-			<div class="hero-image">
-				<img src="/images/wanderfiles-trip-manager.png" alt="Wanderfiles Screenshot">
+			<div class="hero-right">
+				<img
+					src="images/wanderfiles-background.jpeg"
+					alt="Wanderfiles. Manage your trip files in one place"
+				/>
 			</div>
 		</section>
-			<section id="features" class="features">
-			<h2>Key Features</h2>
-			<ul>
-				<li> Organize all travel documents in one place</li>
-				<li> Easy access to hotel, flight, and activity information</li>
-				<li> Seamless collaboration with travel companions</li>
-				<li> Real-time updates and notifications</li>
-			</ul>
+		<section id="features" class="features">
+			<h2 class="features-title">Streamline Your Trip Management</h2>
+			<div class="cards">
+				<div class="card">
+				  <div class="card-icon"><i class="fas fa-file-alt"></i></div>
+				  <h3 class="card-title">Centralized Storage</h3>
+				  <p class="card-subtitle">Keep all your travel documents, itineraries, and reservations in one secure location.</p>
+				</div>
+				<div class="card">
+				  <div class="card-icon"><i class="fas fa-wifi"></i></div>
+				  <h3 class="card-title">Offline Access</h3>
+				  <p class="card-subtitle">Access your travel information anytime, even without an internet connection.</p>
+				</div>
+				<div class="card">
+				  <div class="card-icon"><i class="fas fa-mobile-alt"></i></div>
+				  <h3 class="card-title">Mobile Access</h3>
+				  <p class="card-subtitle">Access your travel information anytime, anywhere on your mobile device.</p>
+				</div>
+				<div class="card">
+				  <div class="card-icon"><i class="fas fa-palette"></i></div>
+				  <h3 class="card-title">Customizable Itineraries</h3>
+				  <p class="card-subtitle">Easily personalize your travel plans and share them with friends and family.</p>
+				</div>
+			  </div>
+					
 		</section>
-		<section id="notify" class="form-container">
-			<h2>Get Notified When the App is Live</h2>
-			<form   action="https://formspree.io/f/mjkbkyjo"			method="POST">
-				<input type="email" name="email" placeholder="Enter your email" required>
-				<button type="submit">Notify Me</button>
-			</form>
-		</section>
-		<footer class="main-footer">
-			<p>&copy; 2024 Wanderfiles. All rights reserved.</p>
-		</footer>
-	</html>
+	</body>
+	<section id="notify" class="form-container">
+		<h2>Get Notified When the App is Live</h2>
+		<form action="https://formspree.io/f/mjkbkyjo" method="POST">
+			<input
+				type="email"
+				name="email"
+				placeholder="Enter your email"
+				required
+			/>
+			<button type="submit">Notify Me</button>
+		</form>
+	</section>
+	<footer class="main-footer">
+		<p>&copy; 2024 Wanderfiles. All rights reserved.</p>
+	</footer>
+</html>
