@@ -1,7 +1,8 @@
 /* styles.css */
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
@@ -84,9 +85,9 @@ footer p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80vh;
-  padding: 0 20px;
+  height: 700px;
   background-color: white;
+  padding-top: 20px;
 }
 
 .hero-left, .hero-right {
@@ -98,25 +99,31 @@ footer p {
 
 .hero-left {
   align-items: flex-start;
-  margin-left: 40px; /* Added margin to the left */
+  margin-left: 80px; /* Added margin to the left */
+  padding-bottom:20px
 }
 
-.logo {
-  max-width: 150px;
-  margin-bottom: 20px;
+.upper-title {
+  font-family: 'Poppins';
+  font-size: 18px;
+  color: #011831;
+
 }
 
 .hero-title {
-  font-size: 3rem;
-  margin: 0;
-  line-height: 50px;
-  letter-spacing: -2px;
+  font-family: 'Volkhov';
+  font-size: 65px;
+  color: #181E4B;
+  line-height: 1;
+  margin: 20px 0px 20px 0px;
 }
 
 .hero-subtitle {
-  font-size: 1.4rem;
+  font-size: 16px;
   margin: 10px 0;
-  font-family: 'Helvetica Neue';
+  line-height:1.5;
+  color: #5E6282;
+  font-family: 'Poppins';
 }
 
 /* Button Styles */
@@ -138,10 +145,21 @@ footer p {
   background-color: #0056b3;
 }
 
+.hero-right{
+  align-items: center; /* Center the image vertically */
+  width: 100%; /* Or any specific width */
+  height: 100%; /* Or any specific height */
+  overflow: hidden; /* Hide overflow if needed */
+  background-image: url('./public/background.png');
+  background-position: top right; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+
+}
+
 .hero-right img {
   max-width: 100%;
-  height: auto;
-  border-radius: 10px;
+  max-height: 100%;
+  object-fit: cover; /* Ensures the image covers the div */
 }
 
 /* Responsive Design */
@@ -222,6 +240,7 @@ html {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  font-weight: 500;
 }
 
 .card {
@@ -234,6 +253,7 @@ html {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
   text-align: left;
+  font-weight: 500;
 }
 
 .card:hover {
@@ -250,13 +270,191 @@ html {
 .card-title {
   font-size: 1.25rem;
   margin: 10px 0;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .card-subtitle {
-  font-size: 1rem;
-  color: #666;
+  font-size: 0.9rem;
+  margin: 10px 0;
+  line-height:1.5;
+  color: #5E6282;
+  font-family: 'Poppins';
+
 }
+
+
+
+.navbar {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.steps {
+  display: flex;
+  flex-direction: row;
+  margin: 40px 0px 40px 0px;
+}
+
+.steps-left {
+  flex: 1;
+  justify-content: left;
+  text-align: left;
+  margin-left: 80px;
+}
+
+.steps-left h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.steps-left .title{
+  color: #5E6282;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Poppins';
+
+}
+
+.steps-left .subtitle{
+  color: #5E6282;
+  font-size: 16px;
+  font-family: 'Poppins';
+}
+
+.steps-right {
+  flex: 1;
+  flex-direction: row;
+  display: flex;
+
+}
+
+.steps-icon {
+  font-size: 2rem;
+  color: #007BFF;
+  margin-bottom: 10px;
+  min-width: 40px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between; /* Distribute space between the images */
+  align-items: center; /* Align images vertically center */
+  gap: 10px; /* Optional: Add space between images */
+}
+
+.image-row img {
+  width: 100%; /* Ensure images are responsive */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures the image covers its container */
+}
+
+.image-container {
+  flex: 1;
+}
+
+
+.download {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 100px 0px 0px;
+}
+
+.download-left h3 {
+  font-size: 2.5rem;
+  margin-bottom: 0px;
+}
+
+.download-left .title{
+  color: #5E6282;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Poppins';
+
+}
+
+.download-left .subtitle{
+  color: #5E6282;
+  font-size: 16px;
+  font-family: 'Poppins';
+}
+
+
+.download {
+  display: flex;
+  height: 400px; /* Adjust height as needed */
+  background-color: #f7f7f7;
+}
+
+.download-left, .download-right {
+  flex: 1; /* Each side takes up 50% of the width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.download-left {
+  text-align: left;
+}
+
+.download-left p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #555;
+  font-family: 'Poppins';
+}
+
+.badges {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.badges a {
+  display: inline-block;
+}
+
+.badges img {
+  width: 150px; /* Adjust size of the badges as needed */
+  cursor: pointer;
+}
+
+.download-right {
+  padding: 20px;
+  flex: 2;
+  position: relative;
+  margin-right: 40px;
+
+}
+
+.download-right video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire div */
+  z-index: 1; /* Places the video behind the content */
+}
+
 
 /* Responsive Design */
 @media (max-width: 1200px) {
@@ -275,4 +473,23 @@ html {
     width: 80%; /* Adjust width for small screens */
     margin: 10px 0;
   }
+
+  .steps {
+    flex-direction: column;
+  }
+
+  .steps-left{
+    margin-left: 10px;
+  }
+
+  .download {
+    flex-direction: column-reverse;
+    margin: 0px;
+  }
+
+  .download-left {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 }
+
