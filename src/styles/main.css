@@ -17,7 +17,7 @@ body {
 
 .form-container h2 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
@@ -41,7 +41,7 @@ body {
   padding: 15px 30px;
   border: none;
   border-radius: 25px; /* More rounded corners */
-  background-color: #007bff;
+  background-color: #011831;
   color: white;
   font-size: 1.2rem;
   font-weight: 600;
@@ -87,7 +87,7 @@ footer p {
   align-items: center;
   height: 700px;
   background-color: white;
-  padding-top: 20px;
+  flex-direction: row-reverse;
 }
 
 .hero-left, .hero-right {
@@ -99,8 +99,13 @@ footer p {
 
 .hero-left {
   align-items: flex-start;
-  margin-left: 80px; /* Added margin to the left */
-  padding-bottom:20px
+  padding-bottom:20px;
+  flex:2;
+  overflow: hidden; /* Hide overflow if needed */
+  background-image: url('./public/background.png');
+  background-position: top right; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  height: 100%;
 }
 
 .upper-title {
@@ -113,7 +118,7 @@ footer p {
 .hero-title {
   font-family: 'Volkhov';
   font-size: 65px;
-  color: #181E4B;
+  color: #011831;
   line-height: 1;
   margin: 20px 0px 20px 0px;
 }
@@ -133,7 +138,7 @@ footer p {
   font-size: 16px; /* Adjusted font size */
   font-weight: bold;
   color: white;
-  background-color: #007BFF;
+  background-color: #011831;
   border: none;
   border-radius: 8px; /* Adjusted border radius */
   cursor: pointer;
@@ -142,18 +147,13 @@ footer p {
 }
 
 .hero-button:hover {
-  background-color: #0056b3;
+  background-color: #011831;
 }
 
 .hero-right{
   align-items: center; /* Center the image vertically */
   width: 100%; /* Or any specific width */
   height: 100%; /* Or any specific height */
-  overflow: hidden; /* Hide overflow if needed */
-  background-image: url('./public/background.png');
-  background-position: top right; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-
 }
 
 .hero-right img {
@@ -226,7 +226,7 @@ html {
 }
 
 .features-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
@@ -263,7 +263,7 @@ html {
 
 .card-icon {
   font-size: 2rem;
-  color: #007BFF;
+  color: #011831;
   margin-bottom: 10px;
 }
 
@@ -327,13 +327,16 @@ html {
   font-size: 16px;
   font-weight: bold;
   font-family: 'Poppins';
-
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 .steps-left .subtitle{
   color: #5E6282;
   font-size: 16px;
   font-family: 'Poppins';
+  margin: 0px;
+  margin-bottom: 5px;
 }
 
 .steps-right {
@@ -345,7 +348,7 @@ html {
 
 .steps-icon {
   font-size: 2rem;
-  color: #007BFF;
+  color: #011831;
   margin-bottom: 10px;
   min-width: 40px;
   justify-content: center;
@@ -378,7 +381,7 @@ html {
 }
 
 .download-left h3 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 0px;
 }
 
